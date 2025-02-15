@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Beaker, Music, Trophy, GraduationCap, Code, ArrowDown } from 'lucide-react';
 
-function HierarchicalInheritance() {
+function HierarchicalInheritance  () {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

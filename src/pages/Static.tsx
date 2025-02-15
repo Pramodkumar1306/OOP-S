@@ -587,6 +587,103 @@ const Static: React.FC = () => {
             </>
           )}
 
+        <div className="min-h-screen bg-gray-100 p-8">
+              <h1 className="text-3xl font-bold text-center mb-8">Java Memory Model Diagram</h1>
+              <div className="p-8 bg-white rounded-lg shadow-lg max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 gap-8 mb-8">
+        {/* Code Section */}
+        <div className="p-4 border-2 border-red-300 rounded-lg">
+          <h2 className="text-lg font-bold mb-4">Code</h2>
+          <pre className="bg-gray-50 p-4 rounded font-mono text-sm">
+{`class Program {
+  static int x, y;
+  static {
+    sop("Inside static block");
+    x = 111;
+    y = 222;
+  }
+  
+  static void display() {
+    sop("Inside static method");
+    sop(x);
+    sop(y);
+  }
+}`}
+          </pre>
+        </div>
+
+        {/* Static Memory Section */}
+        <div className="p-4 border-2 border-purple-300 rounded-lg bg-purple-50">
+          <h2 className="text-lg font-bold mb-4 text-purple-800">Static Memory (Method Area)</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-4 rounded-lg border border-purple-200">
+              <h3 className="font-semibold text-purple-700 mb-2">Class Program</h3>
+              <div className="space-y-2">
+                <div className="font-mono bg-purple-100 p-2 rounded">
+                  static int x = 111
+                </div>
+                <div className="font-mono bg-purple-100 p-2 rounded">
+                  static int y = 222
+                </div>
+                <div className="font-mono bg-purple-100 p-2 rounded">
+                  static void display()
+                </div>
+              </div>
+            </div>
+            <div className="text-sm text-purple-600">
+              ↑ Static members are stored here when class loads
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-8">
+        {/* Stack Section */}
+        <div className="p-4 border-2 border-blue-300 rounded-lg">
+          <h2 className="text-lg font-bold mb-4">Stack</h2>
+          <div className="space-y-4">
+            <div className="bg-blue-50 p-3 rounded">
+              <div className="font-mono">main()</div>
+            </div>
+            <div className="border-l-2 border-blue-400 ml-4 pl-4">
+              <div className="bg-blue-50 p-3 rounded">
+                <div className="font-mono">display()</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Heap Section */}
+        <div className="p-4 border-2 border-green-300 rounded-lg">
+          <h2 className="text-lg font-bold mb-4">Heap</h2>
+          <div className="relative">
+            <div className="bg-green-50 p-4 rounded-lg mb-4">
+              <div className="font-mono">Program Object</div>
+              <div className="ml-4 mt-2 text-gray-500">
+                <div>← References static members</div>
+                <div>from Method Area</div>
+              </div>
+            </div>
+            <div className="absolute right-0 top-0 bg-red-100 px-2 py-1 rounded text-sm">
+              Garbage Collector
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Memory Flow Arrows */}
+      <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+        <h3 className="font-bold mb-2">Memory Flow:</h3>
+        <ul className="list-disc ml-4">
+          <li>Static members are stored in Method Area (Static Memory) when class loads</li>
+          <li>Static block executes during class loading, initializing static variables</li>
+          <li>Static methods are stored in Method Area and can access static variables directly</li>
+          <li>All instances of the class share the same static members</li>
+        </ul>
+      </div>
+    </div>
+            </div>
+
           {/* Explanation */}
           <div className="mt-8 bg-gray-50 p-4 sm:p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4">How Static Memory Works</h2>

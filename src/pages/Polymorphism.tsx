@@ -12,6 +12,7 @@ const Polymorphism = () => {
         <p className="text-gray-600 mb-6">
           Polymorphism allows objects to be treated as instances of their parent class rather than their actual class. It enables a single interface to represent different underlying forms (data types or classes).
         </p>
+    
       </div>
     </div>
         
