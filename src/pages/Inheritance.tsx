@@ -9,6 +9,8 @@ import HybridInheritance from './inheritance/HybridInheritance';
 import Upcasting from './inheritance/Upcasting';
 import Downcasting from './inheritance/Downcasting';
 import Final from './inheritance/Final';
+import Annotation from './inheritance/Annotation';
+import HasA from './inheritance/HasA';
 
 const Inheritance = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -90,6 +92,18 @@ const Inheritance = () => {
             >
               Final
             </Link>
+            <Link
+              to="/inheritance/Annotation"
+              className={`block p-2 rounded-md ${location.pathname === '/inheritance/Annotation' ? 'bg-red-50 text-red-700' : 'text-gray-600 hover:bg-gray-50'}`}
+            >
+              Annotation
+            </Link>
+            <Link
+              to="/inheritance/HasA"
+              className={`block p-2 rounded-md ${location.pathname === '/inheritance/HasA' ? 'bg-red-50 text-red-700' : 'text-gray-600 hover:bg-gray-50'}`}
+            >
+              HasA
+            </Link>
           </div>
         </div>
       </div>
@@ -105,6 +119,8 @@ const Inheritance = () => {
           <Route path="upcasting" element={<Upcasting />} />
           <Route path="downcasting" element={<Downcasting />} />
           <Route path="final" element={<Final />} />
+          <Route path="Annotation" element={<Annotation />} />
+          <Route path="HasA" element={<HasA />} />
           <Route path="/" element={
             <div className="p-6">
               <div className="bg-white rounded-lg shadow-lg p-8">
