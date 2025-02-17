@@ -221,10 +221,10 @@ public class AggregationExample {
           {/* Lightship Box */}
           <div className="w-full sm:w-48 h-40 border-2 border-gray-300 bg-white rounded-lg p-4 flex flex-col relative z-10">
             <span className="text-lg font-semibold mb-2">LapTop</span>
-            <span className="text-black">OS as = new OS</span>
+            <span className="text-black">OS os = new OS</span>
             <span className="text-black">void HasA(Charge ch)</span>
-            <span className="text-black">       ---------</span>
-            <span className="text-black">       ---------</span>
+            <span className="text-black"> {`{`} ---------</span>
+            <span className="text-black">       ---------{`}`}</span>
             {/* <span className="text-black">       ---------</span> */}
           </div>
 
@@ -261,14 +261,14 @@ public class AggregationExample {
             <div className="absolute left-[11.1rem] right-[11.5rem] h-px bg-black">
               <div className="absolute -top-8 left-4 text-red-500 whitespace-nowrap">Aggregation</div>
               <div className="absolute -bottom-8 left-4 text-black whitespace-nowrap">has a</div>
-              <div className="absolute left-5 -translate-x-1 -translate-y-1 w-2 h-2 bg-white border border-black rotate-45"></div>
+              <div className="absolute left-12 -translate-y-1 translate-x-12 w-2 h-2 bg-white border border-black rotate-45"></div>
             </div>
 
             {/* Right Connection */}
             <div className="absolute left-[28.8rem] right-[11.5rem] h-px bg-black">
               <div className="absolute -top-8 right-2 text-black whitespace-nowrap">Composition</div>
               <div className="absolute -bottom-8 right-4 text-black whitespace-nowrap">has a</div>
-              <div className="absolute right-2 -translate-y-1 w-2 h-2 bg-black rotate-45"></div>
+              <div className="absolute right-11 -translate-y-1 -translate-x-12 w-2 h-2 bg-black rotate-45"></div>
             </div>
           </div>
         </div>
