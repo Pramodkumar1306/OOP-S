@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/abstraction" element={<Abstraction />} />
           <Route path="/encapsulation" element={<Encapsulation />} />
-          <Route path="/polymorphism" element={<Polymorphism />} />
+          <Route path="/polymorphism/*" element={<Polymorphism />} />
           <Route path="/inheritance/*" element={<Inheritance />} />
           <Route path="/static" element={<Static />} />
           <Route path="/" element={

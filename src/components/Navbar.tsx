@@ -53,6 +53,13 @@ const Navbar = () => {
                     <span>Inheritance</span>
                   </Link>
                   <Link 
+                    to="/polymorphism" 
+                    className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150 flex items-center space-x-2"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-purple-400"></span>
+                    <span>Polymorphism</span>
+                  </Link>
+                  <Link 
                     to="/abstraction" 
                     className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150 flex items-center space-x-2"
                   >
@@ -65,13 +72,6 @@ const Navbar = () => {
                   >
                     <span className="w-2 h-2 rounded-full bg-green-400"></span>
                     <span>Encapsulation</span>
-                  </Link>
-                  <Link 
-                    to="/polymorphism" 
-                    className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150 flex items-center space-x-2"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-purple-400"></span>
-                    <span>Polymorphism</span>
                   </Link>
                 </div>
               )}

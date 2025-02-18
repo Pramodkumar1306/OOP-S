@@ -218,7 +218,7 @@ public class AggregationExample {
             <span className="text-green-500">Object</span>
           </div>
 
-          {/* Lightship Box */}
+          {/* laptop Box */}
           <div className="w-full sm:w-48 h-40 border-2 border-gray-300 bg-white rounded-lg p-4 flex flex-col relative z-10">
             <span className="text-lg font-semibold mb-2">LapTop</span>
             <span className="text-black">OS os = new OS</span>
