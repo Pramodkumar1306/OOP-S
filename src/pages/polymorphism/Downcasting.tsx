@@ -155,15 +155,15 @@ public class MainM {
 				s = new Circle();
                     s.acceptInput();
                     s.calculateArea();
-					((Circle) s).displayCircleArea();
+					((Circle) s).displayCircleArea();// ✅ Downcasting
 				s = new Reactangle();
 					s.acceptInput();
 					s.calculateArea();
-					((Reactangle) s).displayRectArea();
+					((Reactangle) s).displayRectArea();// ✅ Downcasting
 				s = new Square();
 					s.acceptInput();
 					s.calculateArea();
-					((Reactangle) s).displayRectArea();
+					((Reactangle) s).displayRectArea();// ✅ Downcasting
 	}
 }
 `}
