@@ -151,11 +151,10 @@ public class MainM {
 			Shape s = new Shape();
 				s.acceptInput();
 				s.calculateArea();
-				s = new Circle();
 			
 				s = new Circle();
-				s.acceptInput();
-				s.calculateArea();
+                    s.acceptInput();
+                    s.calculateArea();
 					((Circle) s).displayCircleArea();
 				s = new Reactangle();
 					s.acceptInput();
