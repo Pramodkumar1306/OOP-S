@@ -1,6 +1,10 @@
 import React, {useEffect, useState } from 'react';
 import { GitBranch, ChevronDown } from 'lucide-react';
 import { Link, Routes, Route, useLocation } from 'react-router-dom';
+import CompileTimePolymorphism from './polymorphism/CompileTimePolymorphism';
+import ReactruntimePolymorphism from './polymorphism/RuntimePolymorphism';
+import { div } from 'framer-motion/client';
+import Downcasting from './polymorphism/Downcasting';
 
 
 interface NodeProps {
@@ -36,10 +40,6 @@ rounded-lg px-4 py-2 shadow-lg
 </div>
 );
 };
-
-import CompileTimePolymorphism from './polymorphism/CompileTimePolymorphism';
-import ReactruntimePolymorphism from './polymorphism/RuntimePolymorphism';
-import { div } from 'framer-motion/client';
 const Polymorphism: React.FC = () => {
  
   const location = useLocation();
@@ -50,7 +50,8 @@ const Polymorphism: React.FC = () => {
       <div className="w-1/4 bg-white shadow-lg">
         <div className="p-4">
           <div className="flex items-center mb-6">
-            <GitBranch className="w-6 h-6 text-red-600 mr-2" />
+          <GitBranch className="text-blue-500" />
+
             <h2 className="text-xl font-bold text-gray-800">Polymorphism  Types</h2>
           </div>
 
@@ -70,6 +71,12 @@ const Polymorphism: React.FC = () => {
             >
               Runtime Polymorphism
             </Link>
+            <Link
+              to="/polymorphism/Downcasting"
+              className={`block p-2 rounded-md ${location.pathname === '/polymorphism/Downcasting' ? 'bg-red-50 text-red-700' : 'text-gray-600 hover:bg-gray-50'}`}
+            >
+              Downcasting
+            </Link>
           </div>
         </div>
       </div>
@@ -79,6 +86,7 @@ const Polymorphism: React.FC = () => {
         <Routes>         
           <Route path="CompileTimePolymorphism" element={<CompileTimePolymorphism />} />         
           <Route path="ReactruntimePolymorphism" element={<ReactruntimePolymorphism />} />         
+          <Route path="Downcasting" element={<Downcasting />} />         
           <Route path="/" element={
             <div className="p-6">
               <div className="bg-white rounded-lg shadow-lg p-8">
