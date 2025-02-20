@@ -13,7 +13,7 @@ function App() {
       <div className="min-h-screen bg-gray-100">
         <Navbar />
         <Routes>
-          <Route path="/abstraction" element={<Abstraction />} />
+          <Route path="/abstraction/*" element={<Abstraction />} />
           <Route path="/encapsulation" element={<Encapsulation />} />
           <Route path="/polymorphism/*" element={<Polymorphism />} />
           <Route path="/inheritance/*" element={<Inheritance />} />
