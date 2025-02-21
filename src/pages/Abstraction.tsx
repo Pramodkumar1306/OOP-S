@@ -5,6 +5,7 @@ import { Shield, Code, GitBranch } from 'lucide-react';
 import { CarAbstraction } from './pagessssssss/CarAbstraction';
 import Aclass from './Abstraction/Aclass';
 import Method from './Abstraction/Method';
+import Interface from './Abstraction/Interface';
 
 const Abstraction = () => {
   const location = useLocation();
@@ -41,6 +42,16 @@ const Abstraction = () => {
             >
               Abstraction Method
             </Link>
+            <Link
+              to="Interface"
+              className={`block p-2 rounded-md ${
+                location.pathname.includes('Interface')
+                  ? 'bg-red-50 text-red-700'
+                  : 'text-gray-600 hover:bg-gray-50'
+              }`}
+            >
+              Interface 
+            </Link>
           </div>
         </div>
       </div>
@@ -51,6 +62,7 @@ const Abstraction = () => {
           <Route path="/" element={<CarAbstraction />} />
           <Route path="Aclass" element={<Aclass />} />
           <Route path="Method" element={<Method />} />
+          <Route path="Interface" element={<Interface />} />
         </Routes>
       </div>
     </div>
