@@ -6,6 +6,7 @@ import Encapsulation from './pages/Encapsulation';
 import Polymorphism from './pages/Polymorphism';
 import Inheritance from './pages/Inheritance';
 import Static from './pages/Static';
+import Constructor from './pages/Constructor/Constructor';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/encapsulation" element={<Encapsulation />} />
           <Route path="/polymorphism/*" element={<Polymorphism />} />
           <Route path="/inheritance/*" element={<Inheritance />} />
+          <Route path="/Constructor/*" element={<Constructor />} />
           <Route path="/static" element={<Static />} />
           <Route path="/" element={
             <div className="container mx-auto p-8">

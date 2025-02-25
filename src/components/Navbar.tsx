@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Code2, ChevronDown, Database } from 'lucide-react';
+import { Code2, ChevronDown, Database,CircleEllipsis  } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -78,6 +78,14 @@ const Navbar = () => {
             </div>
 
             {/* Static Link */}
+            <Link 
+              to="/Constructor" 
+              className="flex items-center space-x-2 hover:text-blue-400 transition-colors duration-200"
+            >
+              
+              <CircleEllipsis  className="w-5 h-5 text-blue-400" />
+              <span className="font-medium">Constructor</span>
+            </Link>
             <Link 
               to="/static" 
               className="flex items-center space-x-2 hover:text-blue-400 transition-colors duration-200"
