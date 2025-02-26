@@ -5,6 +5,7 @@
     import DefaultConstructor from './DefaultConstructor';
     import ParameterizedConstructor from './ParameterizedConstructor';
     import CopyConstructor from './CopyConstructor';
+import ConstructorHome from './ConstructorHome';
 
   
 
@@ -60,7 +61,8 @@
         {/* Main Content */}
         <div className="flex-1">
             <Routes>
-            <Route path="/" element= {<DefaultConstructor/>}/>
+            <Route path="/" element= {<ConstructorHome/>}/>
+            <Route path="DefaultConstructor" element= {<DefaultConstructor/>}/>
             <Route path="ParameterizedConstructor" element= {<ParameterizedConstructor/>}/>
             <Route path="CopyConstructor" element= {<CopyConstructor/>}/>
             </Routes>
